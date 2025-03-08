@@ -9,7 +9,7 @@
 | 미션 | 내용                      | 링크                                                                                                    |
 |----|-------------------------|-------------------------------------------------------------------------------------------------------|
 | 1  | 깃허브 리포지토리에 프로젝트 올리기     | [commit](https://github.com/hj-language/account-book/commit/6660b452caee82cc88287c103c4c950ae581c9d5) |
-| 2  | 테이블 설계하기                | [commit]                                                                                              |
+| 2  | 테이블 설계하기                | [commit](https://github.com/hj-language/account-book/commit/c46749da876abd269312766f8667620c2c360fed) |
 | 3  | REST API 설계하기           | [commit]                                                                                              |
 | 4  | 조회 REST API 만들기         | [commit]                                                                                              |
 | 5  | 삽입, 수정, 삭제 REST API 만들기 | [commit]                                                                                              |
