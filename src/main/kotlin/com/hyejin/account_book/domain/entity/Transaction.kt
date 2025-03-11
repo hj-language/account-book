@@ -20,7 +20,7 @@ class Transaction(
 
     val memo: String = ""
 
-    val transactionDate: LocalDate? = null
+    val transactionDate: LocalDate = LocalDate.now()
 
     var deletedDateTime: LocalDateTime? = null
 
