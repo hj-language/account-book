@@ -16,7 +16,4 @@ class User(
     val loginId: String = ""
 
     val password: String = ""
-
-    @OneToMany(mappedBy = "user", cascade = [CascadeType.ALL])
-    val transactions: List<Transaction> = emptyList()
 }

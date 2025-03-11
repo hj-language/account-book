@@ -24,9 +24,7 @@ class Transaction(
 
     var deletedDateTime: LocalDateTime? = null
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    val user: User? = null
+    val userId: Long? = null
 
     @ManyToOne
     @JoinColumn(name = "category_id")
