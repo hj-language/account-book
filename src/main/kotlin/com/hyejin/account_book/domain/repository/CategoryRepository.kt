@@ -1,6 +1,6 @@
 package com.hyejin.account_book.domain.repository
 
-import Category
+import com.hyejin.account_book.domain.entity.Category
 import org.springframework.data.jpa.repository.JpaRepository
 import java.util.*
 

@@ -1,7 +1,7 @@
 package com.hyejin.account_book.domain.presentation.dto
 
-import Category
-import TransactionRecord
+import com.hyejin.account_book.domain.entity.Category
+import com.hyejin.account_book.domain.entity.TransactionRecord
 import java.time.LocalDate
 
 data class TransactionRecordDTO(

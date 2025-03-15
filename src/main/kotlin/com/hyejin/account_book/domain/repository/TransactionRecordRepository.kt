@@ -1,6 +1,6 @@
 package com.hyejin.account_book.domain.repository
 
-import TransactionRecord
+import com.hyejin.account_book.domain.entity.TransactionRecord
 import org.springframework.data.jpa.repository.JpaRepository
 import java.time.LocalDate
 
