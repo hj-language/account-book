@@ -5,7 +5,7 @@ import java.time.LocalDateTime
 
 @Entity
 @Table(name = "transaction")
-class Transaction(
+class TransactionRecord(
         val amount: Int,
         val memo: String,
         val transactionDate: LocalDate = LocalDate.now(),

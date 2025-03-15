@@ -11,5 +11,5 @@ class Category(
     val id: Long? = null
 
     @OneToMany(mappedBy = "user", cascade = [CascadeType.ALL])
-    val transactions: List<Transaction> = emptyList()
+    val transactionRecords: List<TransactionRecord> = emptyList()
 }
