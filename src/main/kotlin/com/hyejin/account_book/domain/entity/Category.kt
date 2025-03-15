@@ -12,6 +12,6 @@ class Category(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null
 
-    @OneToMany(mappedBy = "user", cascade = [CascadeType.ALL])
+    @OneToMany(mappedBy = "category", cascade = [CascadeType.ALL])
     val transactionRecords: List<TransactionRecord> = emptyList()
 }
