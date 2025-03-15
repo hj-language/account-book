@@ -14,6 +14,6 @@ data class TransactionDTO(
             amount = transaction.amount,
             memo = transaction.memo,
             transactionDate = transaction.transactionDate,
-            category = transaction.category!!
+            category = transaction.category
     )
 }
