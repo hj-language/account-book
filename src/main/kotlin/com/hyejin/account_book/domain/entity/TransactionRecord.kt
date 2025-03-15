@@ -1,4 +1,5 @@
-import com.hyejin.account_book.domain.entity.BaseEntity
+package com.hyejin.account_book.domain.entity
+
 import jakarta.persistence.*
 import java.time.LocalDate
 import java.time.LocalDateTime
