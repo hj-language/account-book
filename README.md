@@ -11,7 +11,7 @@
 | 1  | 깃허브 리포지토리에 프로젝트 올리기     | [commit](https://github.com/hj-language/account-book/commit/6660b452caee82cc88287c103c4c950ae581c9d5) |
 | 2  | 테이블 설계하기                | [commit](https://github.com/hj-language/account-book/commit/c46749da876abd269312766f8667620c2c360fed) |
 | 3  | REST API 설계하기           | [commit](https://github.com/hj-language/account-book/commit/904dc50cc1ba04c16a4c9b59c78b38d193c5f54b) |
-| 4  | 조회 REST API 만들기         | [commit]                                                                                              |
+| 4  | 조회 REST API 만들기         | [commit](https://github.com/hj-language/account-book/commit/61c30162056019ee2da3971922f65dedf1c08c85) |
 | 5  | 삽입, 수정, 삭제 REST API 만들기 | [commit]                                                                                              |
 | 6  | 가상 프로필을 나의 프로필로 바꾸기     | [commit]                                                                                              |
 | 7  | 배포한 프로젝트 공유하기           | [link]                                                                                                |
@@ -37,3 +37,10 @@
 
 !["스크린샷 2025-03-09 오후 1 13 28](https://github.com/user-attachments/assets/1004adb8-0f02-4cea-b9d9-16fd2acf99e4)
 - Link: [Postman Link](https://documenter.getpostman.com/view/15047765/2sAYdoFTMq)
+
+
+# 구현 과정
+
+### 💥 트러블슈팅 기록
+- [트러블슈팅 #1 - 레포지터리 등록 안 되는 현상](https://github.com/hj-language/account-book/blob/master/docs/troubleshooting1.md)
+- [트러블슈팅 #2 - DDL 실행 에러](https://github.com/hj-language/account-book/blob/master/docs/troubleshooting2.md)
