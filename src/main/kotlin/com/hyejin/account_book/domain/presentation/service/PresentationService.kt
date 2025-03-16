@@ -15,7 +15,7 @@ class PresentationService(
 
         return categories.map {
             CategoryDTO(
-                id = it.id!!,
+                id = it.id,
                 name = it.name,
                 type = it.type
             )
