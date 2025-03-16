@@ -6,4 +6,5 @@ import java.util.*
 
 interface CategoryRepository : JpaRepository<Category, Long> {
     fun findByName(name: String): Optional<Category>
+    fun findByType(type: String): List<Category>
 }
