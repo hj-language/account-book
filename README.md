@@ -12,7 +12,7 @@
 | 2  | 테이블 설계하기                | [commit](https://github.com/hj-language/account-book/commit/c46749da876abd269312766f8667620c2c360fed) |
 | 3  | REST API 설계하기           | [commit](https://github.com/hj-language/account-book/commit/904dc50cc1ba04c16a4c9b59c78b38d193c5f54b) |
 | 4  | 조회 REST API 만들기         | [commit](https://github.com/hj-language/account-book/commit/61c30162056019ee2da3971922f65dedf1c08c85) |
-| 5  | 삽입, 수정, 삭제 REST API 만들기 | [commit]                                                                                              |
+| 5  | 삽입, 수정, 삭제 REST API 만들기 | [commit](https://github.com/hj-language/account-book/commit/38372b4343095bd030c61d73c87745f081224f46) |
 | 6  | 가상 프로필을 나의 프로필로 바꾸기     | [commit]                                                                                              |
 | 7  | 배포한 프로젝트 공유하기           | [link]                                                                                                |
 
