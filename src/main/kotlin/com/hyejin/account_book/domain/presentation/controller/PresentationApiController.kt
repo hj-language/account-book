@@ -1,9 +1,6 @@
 package com.hyejin.account_book.domain.presentation.controller
 
-import com.hyejin.account_book.domain.presentation.dto.CategoryDTO
-import com.hyejin.account_book.domain.presentation.dto.CreateTransactionRecordRequest
-import com.hyejin.account_book.domain.presentation.dto.FindTransactionRecordsRequest
-import com.hyejin.account_book.domain.presentation.dto.TransactionRecordDTO
+import com.hyejin.account_book.domain.presentation.dto.*
 import com.hyejin.account_book.domain.presentation.service.PresentationService
 import org.springframework.web.bind.annotation.*
 
@@ -25,5 +22,14 @@ class PresentationApiController(
     @PostMapping("/v1/transactions")
     fun createTransaction(@RequestBody request: CreateTransactionRecordRequest): TransactionRecordDTO {
         return presentationService.createTransaction(request)
+    }
+
+
+    @PutMapping("/v1/transactions/{id}")
+    fun createTransaction(
+        @PathVariable id: Long,
+        @RequestBody request: UpdateTransactionRecordRequest
+    ): TransactionRecordDTO {
+        return presentationService.updateTransaction(id, request)
     }
 }
