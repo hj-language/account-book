@@ -79,4 +79,21 @@ class PresentationService(
             )
         )
     }
+
+    fun deleteTransaction(id: Long, request: DeleteTransactionRecordRequest): TransactionRecordDTO {
+        val transactionRecord = presentationRepository.deleteTransaction(id, request.userId)
+
+        return TransactionRecordDTO(
+            id = transactionRecord.id!!,
+            amount = transactionRecord.amount,
+            memo = transactionRecord.memo,
+            transactionDate = transactionRecord.transactionDate,
+            category = CategoryDTO(
+                id = transactionRecord.category.id,
+                name = transactionRecord.category.name,
+                type = transactionRecord.category.type
+            )
+        )
+    }
+
 }
