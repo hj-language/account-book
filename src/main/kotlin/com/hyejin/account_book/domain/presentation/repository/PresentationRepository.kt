@@ -22,9 +22,30 @@ class PresentationRepository(
                 start, end, userId
             )
         }
-        
+
         return transactionRecordRepository.findByTransactionDateBetweenAndCategoryIdAndUserId(
             start, end, categoryId, userId
         )
     }
+
+    fun createTransaction(
+        amount: Int,
+        memo: String?,
+        transactionDate: LocalDate,
+        userId: Long,
+        categoryId: Long
+    ): TransactionRecord {
+        val category = categoryRepository.findById(categoryId).orElseThrow()
+        val transactionRecord = TransactionRecord(
+            amount = amount,
+            memo = memo,
+            transactionDate = transactionDate,
+            userId = userId,
+            category = category
+        )
+
+        return transactionRecordRepository.save(transactionRecord)
+    }
+
+
 }
