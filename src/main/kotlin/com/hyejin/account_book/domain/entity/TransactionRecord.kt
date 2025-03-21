@@ -7,11 +7,11 @@ import java.time.LocalDateTime
 @Entity
 @Table(name = "transaction")
 class TransactionRecord(
-    val amount: Int,
-    val memo: String?,
-    val transactionDate: LocalDate = LocalDate.now(),
+    var amount: Int,
+    var memo: String?,
+    var transactionDate: LocalDate = LocalDate.now(),
     val userId: Long,
-    @ManyToOne @JoinColumn(name = "category_id") val category: Category
+    @ManyToOne @JoinColumn(name = "category_id") var category: Category
 ) : BaseEntity() {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

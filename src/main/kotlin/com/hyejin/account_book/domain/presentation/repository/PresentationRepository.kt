@@ -47,5 +47,28 @@ class PresentationRepository(
         return transactionRecordRepository.save(transactionRecord)
     }
 
+    fun updateTransaction(
+        id: Long,
+        amount: Int,
+        memo: String?,
+        transactionDate: LocalDate,
+        categoryId: Long,
+        userId: Long
+    ): TransactionRecord {
+        val category = categoryRepository.findById(categoryId).orElseThrow()
+        val transactionRecord = transactionRecordRepository.findById(id).orElseThrow()
+
+        if (transactionRecord.userId != userId) {
+            throw IllegalAccessException("You can't update other user's transaction")
+        }
+
+        transactionRecord.amount = amount
+        transactionRecord.memo = memo
+        transactionRecord.transactionDate = transactionDate
+        transactionRecord.category = category
+
+        return transactionRecordRepository.save(transactionRecord)
+    }
+
 
 }
