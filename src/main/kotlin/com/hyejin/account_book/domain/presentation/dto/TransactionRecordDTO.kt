@@ -4,7 +4,7 @@ import java.time.LocalDate
 
 data class TransactionRecordDTO(
     val amount: Int,
-    val memo: String,
+    val memo: String?,
     val transactionDate: LocalDate,
     val category: CategoryDTO
 )
