@@ -36,7 +36,11 @@ class PresentationService(
 
         return transactions.map {
             TransactionRecordDTO(
-                amount = it.amount, memo = it.memo, transactionDate = it.transactionDate, category = CategoryDTO(
+                id = it.id!!,
+                amount = it.amount,
+                memo = it.memo,
+                transactionDate = it.transactionDate,
+                category = CategoryDTO(
                     id = it.category.id, name = it.category.name, type = it.category.type
                 )
             )
@@ -45,14 +49,11 @@ class PresentationService(
 
     fun createTransaction(request: CreateTransactionRecordRequest): TransactionRecordDTO {
         val transactionRecord = presentationRepository.createTransaction(
-            request.amount,
-            request.memo,
-            request.transactionDate,
-            request.userId,
-            request.categoryId
+            request.amount, request.memo, request.transactionDate, request.userId, request.categoryId
         )
 
         return TransactionRecordDTO(
+            id = transactionRecord.id!!,
             amount = transactionRecord.amount,
             memo = transactionRecord.memo,
             transactionDate = transactionRecord.transactionDate,
