@@ -1,9 +1,6 @@
 package com.hyejin.account_book.domain.presentation.service
 
-import com.hyejin.account_book.domain.presentation.dto.CategoryDTO
-import com.hyejin.account_book.domain.presentation.dto.CreateTransactionRecordRequest
-import com.hyejin.account_book.domain.presentation.dto.FindTransactionRecordsRequest
-import com.hyejin.account_book.domain.presentation.dto.TransactionRecordDTO
+import com.hyejin.account_book.domain.presentation.dto.*
 import com.hyejin.account_book.domain.presentation.repository.PresentationRepository
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
@@ -50,6 +47,24 @@ class PresentationService(
     fun createTransaction(request: CreateTransactionRecordRequest): TransactionRecordDTO {
         val transactionRecord = presentationRepository.createTransaction(
             request.amount, request.memo, request.transactionDate, request.userId, request.categoryId
+        )
+
+        return TransactionRecordDTO(
+            id = transactionRecord.id!!,
+            amount = transactionRecord.amount,
+            memo = transactionRecord.memo,
+            transactionDate = transactionRecord.transactionDate,
+            category = CategoryDTO(
+                id = transactionRecord.category.id,
+                name = transactionRecord.category.name,
+                type = transactionRecord.category.type
+            )
+        )
+    }
+
+    fun updateTransaction(id: Long, request: UpdateTransactionRecordRequest): TransactionRecordDTO {
+        val transactionRecord = presentationRepository.updateTransaction(
+            id, request.amount, request.memo, request.transactionDate, request.categoryId, request.userId
         )
 
         return TransactionRecordDTO(
