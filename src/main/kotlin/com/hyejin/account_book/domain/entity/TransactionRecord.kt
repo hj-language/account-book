@@ -1,9 +1,13 @@
 package com.hyejin.account_book.domain.entity
 
 import jakarta.persistence.*
+import org.hibernate.annotations.SQLDelete
+import org.hibernate.annotations.SQLRestriction
 import java.time.LocalDate
 import java.time.LocalDateTime
 
+@SQLRestriction("deleted_date_time is null")
+@SQLDelete(sql = "UPDATE transaction SET deleted_date_time = NOW() WHERE id = ?")
 @Entity
 @Table(name = "transaction")
 class TransactionRecord(

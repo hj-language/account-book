@@ -6,6 +6,7 @@ import com.hyejin.account_book.domain.repository.CategoryRepository
 import com.hyejin.account_book.domain.repository.TransactionRecordRepository
 import org.springframework.stereotype.Repository
 import java.time.LocalDate
+import java.time.LocalDateTime
 
 @Repository
 class PresentationRepository(
@@ -67,6 +68,17 @@ class PresentationRepository(
         transactionRecord.transactionDate = transactionDate
         transactionRecord.category = category
 
+        return transactionRecordRepository.save(transactionRecord)
+    }
+
+    fun deleteTransaction(id: Long, userId: Long): TransactionRecord {
+        val transactionRecord = transactionRecordRepository.findById(id).orElseThrow()
+
+        if (transactionRecord.userId != userId) {
+            throw IllegalAccessException("You can't delete other user's transaction")
+        }
+
+        transactionRecord.deletedDateTime = LocalDateTime.now()
         return transactionRecordRepository.save(transactionRecord)
     }
 
