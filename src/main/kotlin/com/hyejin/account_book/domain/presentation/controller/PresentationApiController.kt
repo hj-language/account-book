@@ -32,4 +32,12 @@ class PresentationApiController(
     ): TransactionRecordDTO {
         return presentationService.updateTransaction(id, request)
     }
+
+    @DeleteMapping("/v1/transactions/{id}")
+    fun deleteTransaction(
+        @PathVariable id: Long,
+        @RequestBody request: DeleteTransactionRecordRequest
+    ): TransactionRecordDTO {
+        return presentationService.deleteTransaction(id, request)
+    }
 }
